@@ -67,7 +67,7 @@ public class CalculatorTest {
 	}
 
 	@Test
-	public void testDivisionByZero() throws Exception {
+	public void testDivisionByZero()  {
 
 		//Setup
 		Calculator calc = new CalculatorImpl();
@@ -85,4 +85,21 @@ public class CalculatorTest {
 		}
 
 	}
-}
+
+	@Test
+	public  void testModuloOperation() throws CalculatorException {
+		CalculatorImpl calc = new CalculatorImpl();
+
+			calc.push(9.0);
+			calc.push(5.0);
+			double result = calc.perform(Operation.mod);
+			assertEquals(4,result,0);
+		}
+
+
+
+
+
+	}
+
+
